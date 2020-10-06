@@ -38,7 +38,7 @@ namespace Keysight.OpenTap.Plugins.WaveGen_33600A.Instrument
 			if (!IdnString.Contains("Instrument ID"))
 			{
 				Log.Error("This instrument driver does not support the connected instrument.");
-				throw new ArgumentException("Wrong instrument type.");
+				// throw new ArgumentException("Wrong instrument type.");
 			}
 
 		}
