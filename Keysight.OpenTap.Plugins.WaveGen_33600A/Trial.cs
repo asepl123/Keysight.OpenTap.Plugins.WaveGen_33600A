@@ -18,6 +18,12 @@ namespace Keysight.OpenTap.Plugins.WaveGen_33600A
 	{
 		#region Settings
 		// ToDo: Add property here for each parameter the end user should be able to change
+		[Display(Name: "Instrument", Description: "Enter Instrument", Group: "Instrument Settings", Order: -10000)]
+		public MyInst MyInst { get; set; }
+
+		[Display(Name: "Frequency", Description: "Enter Frequency", Group: "Inputs", Order: 1.0)]
+		public double Frequency { get; set; }
+
 		#endregion
 
 		public Trial()
@@ -29,7 +35,9 @@ namespace Keysight.OpenTap.Plugins.WaveGen_33600A
 		{
 			// ToDo: Add test case code.
 			RunChildSteps(); //If the step supports child steps.
-
+			var myFreq = Convert.ToDouble(MyInst.ScpiQuery("SOURce:FREQuency?"));
+			Log.Info(myFreq.ToString());
+			Log.Info(myFreq.GetType().ToString());
 			// If no verdict is used, the verdict will default to NotSet.
 			// You can change the verdict using UpgradeVerdict() as shown below.
 			// UpgradeVerdict(Verdict.Pass);

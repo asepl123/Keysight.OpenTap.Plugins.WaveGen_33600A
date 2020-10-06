@@ -2,8 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using OpenTap;   // Use OpenTAP infrastructure/core components (log,TestStep definition, etc)
-using Keysight.OpenTap.Plugins.WaveGen_33600A.Instrument;
+using OpenTap;
 
 namespace Keysight.OpenTap.Plugins.WaveGen_33600A
 {

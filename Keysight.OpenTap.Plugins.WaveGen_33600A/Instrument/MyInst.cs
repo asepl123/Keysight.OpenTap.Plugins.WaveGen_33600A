@@ -5,13 +5,9 @@ using System.Text;
 using System.ComponentModel;
 using OpenTap;
 
-//Note this template assumes that you have a SCPI based instrument, and accordingly
-//extends the ScpiInstrument base class.
+// This TestStep will create Instrument Class
 
-//If you do NOT have a SCPI based instrument, you should modify this instance to extend
-//the (less powerful) Instrument base class.
-
-namespace Keysight.OpenTap.Plugins.WaveGen_33600A.Instrument
+namespace Keysight.OpenTap.Plugins.WaveGen_33600A
 {
 	[Display("WaveGen33600A", Group: "Keysight.OpenTap.Plugins.WaveGen_33600A.Instrument", Description: "33500B/33600A Series Function / Arbitrary Waveform Generators \n List of Instrument: \n 33500B Series: 33509B, 33510B, 33511B, 33512B, 33519B, 33520B, 33521B, 33522B \n 33600A Series: 33609A, 33610A, 33611A, 33612A, 33619A, 33620A, 33621A, 33622A")]
 	public class MyInst : ScpiInstrument
